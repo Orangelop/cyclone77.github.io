@@ -181,7 +181,8 @@ a:hover {
 }
 
 .support-grid::after {
-    content: "😢 Sorry, CSS Grid is unsupported in your browser.";
+    content: "当你停止尝试的时候，你就完全失败了。";
+    content: "You make the failure complete when you stop trying.";
 }
 
 [class^="support-"]::after {
