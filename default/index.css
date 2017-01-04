@@ -192,3 +192,12 @@ a:hover {
     text-align: center;
     padding: 20px;
 }
+
+.alinkCore{
+    float: right;
+}
+.alinkCore a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
