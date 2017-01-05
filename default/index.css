@@ -1,203 +1,82 @@
-/* basics */
+@charset "UTF-8";
+/* var */
+body, h1, p {
+  margin: 0; }
 
+h1, p {
+  padding: 10px; }
+
+/* basics */
 body {
-    background: #f8f7f2;
-    padding: 0 10%;
-    font: 100%/1.5 'Kalam', cursive;
-    margin: 0;
-}
+  background: #f8f7f2;
+  padding: 0 10%;
+  font: 100%/1.5 'Kalam', cursive; }
 
 h1 {
-    margin: 0;
-    line-height: 1;
-    padding: 10px;
-    color: #251b19;
-}
+  line-height: 1;
+  color: #251b19; }
 
 p {
-    margin: 0;
-    padding: 10px;
-    color: #251b19;
-    font-size: 1.2em;
-}
+  color: #251b19;
+  font-size: 1.2em; }
 
 a {
-    color: #e56633;
-}
+  color: #e56633;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
 
-a:hover {
-    text-decoration: none;
-}
+/* the content */
+.header {
+  background: #19212a;
+  text-align: center;
+  padding: 20px; }
+  .header:after {
+    color: #afafaf;
+    content: "每当你停下来的时候就是你失败的时候。";
+    content: "You make the failure complete when you stop trying."; }
 
-
-/* the grid */
-
-.grid-1 {
-    display: grid;
-    width: 100%;
-    max-width: 770px;
-    margin: 10% auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 200px 200px auto 200px 200px 200px auto 200px 200px auto;
-    grid-gap: 25px;
-}
-
-
-/* panels */
-
-.panel {
+.section {
+  margin: 10% auto;
+  max-width: 770px;
+  width: 100%; }
+  .section .panel {
     color: white;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    box-shadow: 0 0px 0px 5px #251b19;
-}
-
-
-/* individual panels */
-
-.panel-title {
+    box-shadow: 0 0px 0px 5px #251b19; }
+  .section .panel-0 p {
+    display: inline-block; }
+  .section .panel-0 .alinkCore {
+    float: right; }
+  .section .panel-0 {
+    box-shadow: none; }
+  .section .panel-1 {
+    box-shadow: none; }
+  .section .panel-3 {
+    box-shadow: none; }
+  .section .panel-7 {
+    box-shadow: none; }
+  .section .panel-9 {
+    box-shadow: none; }
+  .section .panel-11 {
     box-shadow: none;
-}
-
-.panel-1 {
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cat-002.svg);
-    box-shadow: none;
-}
-
-.panel-2 {
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cat-001.svg);
-}
-
-.panel-3 {
-    box-shadow: none;
-}
-
-.panel-4 {
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cat-003.svg);
-}
-
-.panel-5 {
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cat-004.svg);
-}
-
-.panel-6 {
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cat-005.svg);
-}
-
-.panel-7 {
-    box-shadow: none;
-}
-
-.panel-8 {
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cat-007.svg);
-}
-
-.panel-9 {
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/cat-008.svg);
-    box-shadow: none;
-}
-
-.panel-copyright {
-    box-shadow: none;
-    font-size: .75em;
-}
-
-
-/* media query 1 */
-
-@media only screen and (min-width: 400px) {
-    .grid-1 {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto 200px auto 200px 200px auto 200px auto;
-    }
-    .panel-title,
-    .panel-3,
-    .panel-6,
-    .panel-7,
-    .panel-copyright {
-        grid-column: span 2;
-    }
-    .panel-copyright {
-        text-align: right;
-    }
-    .panel-7 {
-        text-align: center;
-    }
+    font-size: 0.75em; }
+  @media screen and (min-width: 400px) {
+    .section .panel-11 {
+      text-align: right; }
     h1 {
-        font-size: 3em;
-    }
-}
-
-
-/* media query 2 */
-
-@media only screen and (min-width: 600px) {
-    .grid-1 {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto 200px 200px 200px auto;
-    }
-    .panel-title,
-    .panel-copyright {
-        grid-column: span 3;
-    }
-    .panel-3,
-    .panel-6 {
-        grid-column: auto;
-    }
-    .panel-8 {
-        grid-column: span 2;
-    }
+      font-size: 3em; } }
+  @media screen and (min-width: 600px) {
     h1 {
-        font-size: 3.5em;
-    }
-    p {
-        font-size: 1.3em;
-    }
-    /* flexbox centering */
-    .panel-3 {
-        display: flex;
-        align-items: center;
-    }
-    /* layering */
-    .panel-7 {
-        grid-column: 1;
-        grid-row: 4;
-        z-index: 1;
-        margin: -5px 0 0 -10px;
-        transform: rotate(-2deg);
-    }
-    .panel-7 p {
+      font-size: 3.5em; }
+    .section .panel-7 {
+      transform: rotate(-2deg);
+      margin: -5px 0 0 -10px; }
+      .section .panel-7 p {
         background: #f8f7f2;
         box-shadow: 0 0px 0px 5px #251b19;
-        text-align: left;
-    }
-    .panel-8 {
-        grid-column: 1 / span 2;
-        grid-row: 4;
-        background-size: 70%;
-        background-position: right;
-    }
-}
+        text-align: left; } }
 
-.support-grid::after {
-    content: "当你停止尝试的时候，你就完全失败了。";
-    content: "You make the failure complete when you stop trying.";
-}
-
-[class^="support-"]::after {
-    display: block;
-    color: #afafaf;
-    background: #19212a;
-    text-align: center;
-    padding: 20px;
-}
-
-.alinkCore{
-    float: right;
-}
-.alinkCore a{
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-}
+/*# sourceMappingURL=index.css.map */
