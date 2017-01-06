@@ -19,7 +19,6 @@ $fontSize12: 0.75em; //12px;
 
 body {
     background: $bgColor;
-    padding: 0 10%;
     font: 100%/1.5 'Kalam', cursive;
     @extend %margin0;
 }
@@ -47,7 +46,62 @@ a {
 }
 
 
+/* press */
+
+.press {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    @extend %margin0;
+    .inner {
+        width: 0;
+        height: 2px;
+        background-color: #67CF22;
+    }
+}
+
+.spin-1 {
+    display: none;
+    position: fixed;
+    right: 2px;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #74f122;
+    border-right: 2px solid #6cd229;
+    border-radius: 50%;
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
 /* the content */
+
+.content {
+    padding: 0 10%;
+}
 
 .header {
     background: #19212a;
